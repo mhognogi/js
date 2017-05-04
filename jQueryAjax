@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <form class="form-signin" id="login">
+        <h2 class="form-signin-heading">Please login</h2>
+        <input type="text" class="form-control" name="name" placeholder="Email Address" required autofocus=""/>
+        <input type="pass" class="form-control" name="password" placeholder="Password" required/>
+        <div id="error"></div>
+        <label class="checkbox">
+            <input type="checkbox" value="remember" name="remember"> Remember me
+        </label>
+
+        <button class="btn-login" type="button" onclick="send()">Login</button>
+    </form>
+</div>
+
+<script>
+    function send() {
+        jQuery.ajax({
+            type: 'POST',
+            url: 'php/ajax.php',
+            data:jQuery('#login').serialize(),
+            success: function (result) {
+                jQuery('#error').html(result);
+            }
+        });
+    };
+</script>
