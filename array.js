@@ -9,3 +9,9 @@
     idDiv_initiator_unique = arrInit.filter (function (value, index, array) {
         return array.indexOf (value) == index;
     });
+
+//intersect 2 arrays
+var a = [1,2,3];
+var b = [2,3,4,5];
+var c = $(b).not($(b).not(a));
+alert(c);
