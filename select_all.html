@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<input type="checkbox" name="all" class="checkall" />Check All</br>
+
+<input type="checkbox" class="cb-element" /> Checkbox  1</br>
+<input type="checkbox" class="cb-element" /> Checkbox  2</br>
+<input type="checkbox" class="cb-element" /> Checkbox  3
+
+<script>
+$('.checkall:checkbox').change(function () {
+    if($(this).attr("checked")) {
+    	$('.cb-element:checkbox').attr('checked','checked');
+    }
+    else {
+    	$('.cb-element:checkbox').removeAttr('checked');
+    }  
+});
+</script>
