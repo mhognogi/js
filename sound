@@ -1,0 +1,9 @@
+<div onclick="cinta()" style="cursor: pointer;">Play</div>
+
+<script>
+        function cinta() {
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', 'sound.wav');
+            audioElement.play();
+        }
+</script>
