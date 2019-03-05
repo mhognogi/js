@@ -18,6 +18,7 @@
             type: 'POST',
             url: 'php/ajax.php',
             data:jQuery('#login').serialize(),
+            dataType: "html",
             success: function (result) {
                 jQuery('#error').html(result);
             }
